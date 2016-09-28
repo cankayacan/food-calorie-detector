@@ -1,0 +1,14 @@
+.url {
+  border-color: #0F80C4;
+  border-width: 1;
+  margin: 5;
+  padding: 5;
+}
+
+.tag {
+  color: #F5F5F5;
+  background-color: #0F80C4;
+  margin: 5;
+  padding: 5;
+  border-radius: 10;
+}

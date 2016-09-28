@@ -1,0 +1,20 @@
+<StackLayout class="api-page">
+	<Button (tap)="takePicture()" text="Take Picture"></Button>
+	<ActivityIndicator busy="{{isLoading}}" horizontalAlignment="center" verticalAlignment="center"></ActivityIndicator>
+	<Label [text]="errorMsg" *ngIf="errorMsg"></Label>
+
+	<ListView [items]="foods" style="height: 100%">
+		<template let-item="item" let-i="index">
+			<GridLayout columns="100, auto" rows="auto">
+				<Image col="0" [src]="item.photo.thumb"></Image>
+				<StackLayout col="1">
+					<Label [text]="item.food_name" style="font-weight: bold"></Label>
+					<StackLayout orientation="horizontal">
+						<Label [text]="item.nf_calories"></Label>
+						<Label text="Calorie"></Label>
+					</StackLayout>
+				</StackLayout>
+			</GridLayout>
+		</template>
+	</ListView>
+</StackLayout>
