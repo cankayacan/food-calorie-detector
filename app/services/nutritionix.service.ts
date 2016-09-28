@@ -16,7 +16,6 @@ export class NutritionixService {
         let options = new RequestOptions({ headers: headers });
         return this.http
             .post('https://trackapi.nutritionix.com/v2/natural/nutrients', {
-                //"query":"for breakfast i ate 2 eggs, bacon, and french toast",
                 "query": tagsStr,
                 "timezone": "US/Eastern"
             }, options)

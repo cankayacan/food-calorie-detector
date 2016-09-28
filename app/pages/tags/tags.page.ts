@@ -34,7 +34,7 @@ export class TagsPage {
                     console.log(tags);
                     this.errorMsg = '';
                     this.isLoading = false;
-                    let top5TagsSearchQuery = top5Tags.join();
+                    let top5TagsSearchQuery = top5Tags.join(' ');
                     this.nutritionixService.getFoods(top5TagsSearchQuery).subscribe(foods => {
                         this.foods = foods;
                     }, (error) => console.error(error));
